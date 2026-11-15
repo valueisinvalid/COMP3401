@@ -1,0 +1,23 @@
+//JAVA CODE
+
+public class q1 {
+    public static void main(String[] args) {
+        int[] A = {10, 5, 20, 15, 30};
+        A[1] = A[0];
+        A[2] = A[0];
+        A[3] = A[0];
+        A[4] = A[0];
+    }
+}
+
+
+//MIPS SOLUTION
+
+# int[] A = {10, 5, 20, 15, 30};
+# (We assume the base address of array A is stored in $s0)
+
+lw  $t0, 0($s0)        # $t0 = A[0]       → Load the first element (A[0] = 10) into $t0
+sw  $t0, 4($s0)        # Store $t0 into memory position of A[1]  → A[1] = A[0]
+sw  $t0, 8($s0)        # Store $t0 into memory position of A[2]  → A[2] = A[0]
+sw  $t0, 12($s0)       # Store $t0 into memory position of A[3]  → A[3] = A[0]
+sw  $t0, 16($s0)       # Store $t0 into memory position of A[4]  → A[4] = A[0]

@@ -1,0 +1,111 @@
+
+//JAVA CODE 
+
+public class q2 {
+    public static void main(String[] args) {
+        int total_kurus = 0;
+
+        // 5 * 1 Kuruş
+        total_kurus = total_kurus + 1;
+        total_kurus = total_kurus + 1;
+        total_kurus = total_kurus + 1;
+        total_kurus = total_kurus + 1;
+        total_kurus = total_kurus + 1;
+
+        // 7 * 5 Kuruş
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+        total_kurus = total_kurus + 5;
+
+        // 6 * 10 Kuruş
+        total_kurus = total_kurus + 10;
+        total_kurus = total_kurus + 10;
+        total_kurus = total_kurus + 10;
+        total_kurus = total_kurus + 10;
+        total_kurus = total_kurus + 10;
+        total_kurus = total_kurus + 10;
+
+        // 4 * 25 Kuruş
+        total_kurus = total_kurus + 25;
+        total_kurus = total_kurus + 25;
+        total_kurus = total_kurus + 25;
+        total_kurus = total_kurus + 25;
+
+        // 2 * 50 Kuruş
+        total_kurus = total_kurus + 50;
+        total_kurus = total_kurus + 50;
+    }
+}
+
+
+//MIPS SOLUTION
+
+
+# int total_kurus = 0;
+add $s0, $zero, $zero       # $s0 = 0  (initialize total_kurus = 0)
+
+
+# --------------------------------
+# // 5 * 1 Kuruş
+# --------------------------------
+addi $t0, $zero, 1          # $t0 = 1   (represents 1 kuruş)
+add $s0, $s0, $t0           # total_kurus = total_kurus + 1
+add $s0, $s0, $t0           # total_kurus = total_kurus + 1
+add $s0, $s0, $t0           # total_kurus = total_kurus + 1
+add $s0, $s0, $t0           # total_kurus = total_kurus + 1
+add $s0, $s0, $t0           # total_kurus = total_kurus + 1
+
+
+# --------------------------------
+# // 7 * 5 Kuruş
+# --------------------------------
+addi $t0, $zero, 5          # $t0 = 5   (represents 5 kuruş)
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+add $s0, $s0, $t0           # total_kurus = total_kurus + 5
+
+
+# --------------------------------
+# // 6 * 10 Kuruş
+# --------------------------------
+addi $t0, $zero, 10         # $t0 = 10  (represents 10 kuruş)
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+add $s0, $s0, $t0           # total_kurus = total_kurus + 10
+
+
+# --------------------------------
+# // 4 * 25 Kuruş
+# --------------------------------
+addi $t0, $zero, 25         # $t0 = 25  (represents 25 kuruş)
+add $s0, $s0, $t0           # total_kurus = total_kurus + 25
+add $s0, $s0, $t0           # total_kurus = total_kurus + 25
+add $s0, $s0, $t0           # total_kurus = total_kurus + 25
+add $s0, $s0, $t0           # total_kurus = total_kurus + 25
+
+
+# --------------------------------
+# // 2 * 50 Kuruş
+# --------------------------------
+addi $t0, $zero, 50         # $t0 = 50  (represents 50 kuruş)
+add $s0, $s0, $t0           # total_kurus = total_kurus + 50
+add $s0, $s0, $t0           # total_kurus = total_kurus + 50
+
+
+# --------------------------------
+# Memory operations (not in Java, just for demonstration)
+# --------------------------------
+addi $t1, $zero, 1000       # $t1 = 1000 (example address)
+sw $s0, 0($t1)              # store total_kurus in memory
+lw $s1, 0($t1)              # load it back to $s1
